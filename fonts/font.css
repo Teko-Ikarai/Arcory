@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'GeoSansLight';
+    src: url(./GeosansLight.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(./Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'NotoSans';
+    src: url(./NotoSansCJKsc-Regular.otf);
+}
+
+@font-face {
+    font-family: 'NotoSansLight';
+    src: url(./NotoSansCJKsc-Light.otf);
+}

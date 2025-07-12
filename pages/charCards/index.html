@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <script src="../../soberScripts/sober.min.js"></script>
+    <script src="../../soberScripts/sober-theme.min.js"></script>
+    <script>
+        console.log(sober)
+    </script>
+    <title>Characters</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+    <s-page>
+        <s-drawer>
+            <!--左侧抽屉-->
+            <div slot="start">
+                <s-menu>
+                    <div slot="label">控制台</div>
+                    <s-menu-item id="home">
+                        <s-icon slot="start" name="home"></s-icon>
+                        首页
+                    </s-menu-item>
+                    <s-menu-item id="charCards" checked="true">
+                        <s-icon slot="start">
+                            <svg viewBox="0 -960 960 960">
+                                <path d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z"></path>
+                            </svg>
+                        </s-icon>
+                        角色
+                    </s-menu-item>
+                </s-menu>
+                <s-menu>
+                    <div slot="label">其他</div>
+                    <s-menu-item id="about">关于</s-menu-item>
+                    <s-menu-item id="contactUs">联系我们</s-menu-item>
+                </s-menu>
+            </div>
+
+            <!--主视图-->
+            <s-scroll-view class="main">
+                <div class="header"></div>
+                <!--正文-->
+                <div class="content">
+                    <div class="charactersContainer">
+                        <s-carousel class="characters" id="characters" autoplay="true">
+                            <s-carousel-item selected="true">
+                                <img src="../../images/characters/hikariFracture.png">
+                                <div class="charInfo">
+                                    <h1>Hikari</h1>
+                                    <p><b>宿命</b>岂是凡人能够违抗？</p>
+                                </div>
+                            </s-carousel-item>
+                            <s-carousel-item>
+                                <img src="../../images/characters/tairitsuGrievousLady.png">
+                                <div class="charInfo">
+                                    <h1>Tairitsu</h1>
+                                    <p>“而属于我的结局，便是一场悲惨的<b>死亡</b>。”</p>
+                                </div>
+                            </s-carousel-item>
+                            <s-carousel-item>
+                                <img src="../../images/characters/maya.png">
+                                <div class="charInfo">
+                                    <h1>Maya</h1>
+                                    <p>「<b>“无所不有”</b>的你，又想要什么呢？」 <br>
+                                        ——直视你的心，直面现实，然后做出选择，这样就好。
+                                    </p>
+                                </div>
+                            </s-carousel-item>
+                            <s-carousel-item>
+                                <img src="../../images/characters/lacrymira.png">
+                                <div class="charInfo">
+                                    <h3>~Ascendant - 8th Seeker~</h3>
+                                    <h1>Lacrymira</h1>
+                                    <p>“那个深深嵌入Arcaea心脏的名字，你<b>无从知晓</b>”</p>
+                                </div>
+                            </s-carousel-item>
+                            <s-carousel-item>
+                                <img src="../../images/characters/nell.png">
+                                <div class="charInfo">
+                                    <h3>~Ascendant - 6th Seeker~</h3>
+                                    <h1>Nell / Forlorn</h1>
+                                    <p>「至高：第八探索者」—— <br>
+                                        <b>「慈悲」</b>。
+                                    </p>
+                                </div>
+                            </s-carousel-item>
+                            <s-carousel-item>
+                                <img src="../../images/characters/lagrange.png">
+                                <div class="charInfo">
+                                    <h1>Lagrange</h1>
+                                    <p><b>拉</b> 格 朗 日</p>
+                                </div>
+                            </s-carousel-item>
+                            <s-carousel-item>
+                                <img src="../../images/characters/saya.png">
+                                <div class="charInfo">
+                                    <h1>Saya</h1>
+                                    <p>“在那些地方，人类可以成为<b>上帝</b>。”</p>
+                                </div>
+                            </s-carousel-item>
+                        </s-carousel>
+
+                        <s-divider>Partners</s-divider>
+                        <div class="list">
+                            <div class="item">
+                                <s-dialog>
+                                    <s-card slot="trigger" clickable="true">
+                                        <img slot="image" src="../../images/charCards/hikariCard.jpg">
+                                        <div slot="headline">光 Hikari</div>
+                                        <div slot="text">
+                                            Main Story Act 1 : <br>
+                                            Creation
+                                        </div>
+                                    </s-card>
+                                    <div slot="headline"> Hikari </div>
+                                    <div slot="text" class="charCard">
+                                        <div class="charStand">
+                                            <img src="../../images/charStand/hikariStand.png">
+                                        </div>
+                                        <div class="charIntroduce">
+                                            <h3>~</h3>
+                                            <h1>光</h1>
+                                            <p>[SUPPORT]</p>
+                                            <p>
+                                                EASY - <br>
+                                                Recollection Rate loss reduced for 'LOST' notes
+                                            </p>
+                                        </div>
+                                        <s-divider>Variants</s-divider>
+                                        <div>
+                                            <s-dialog>
+                                                <s-button slot="trigger">Hikari (Zero)</s-button>
+                                                <div slot="headline"> Hikari </div>
+                                                <div slot="text" class="charCard">
+                                                    <div class="charStand">
+                                                        <img src="../../images/charStand/hikariZeroStand.png">
+                                                    </div>
+                                                    <h3>Zero</h3>
+                                                    <h1>光</h1>
+                                                    <p>[CHALLENGE]</p>
+                                                    <p>
+                                                        (Lv8) <br>
+                                                        Set Recollection Gauge to 0 on note 'LOST'
+                                                    </p>
+                                                </div>
+                                            </s-dialog>
+                                        </div>
+                                    </div>
+                                </s-dialog>
+                            </div>
+                            <div class="item">
+                                <s-dialog>
+                                    <s-card slot="trigger" clickable="true">
+                                        <img slot="image" src="../../images/charCards/lacrymiraCard.jpg">
+                                        <div slot="headline">洞烛 Insight</div>
+                                        <div slot="text">
+                                            Main Story Act 2 : <br>
+                                            Catastrophe
+                                        </div>
+                                    </s-card>
+                                    <div slot="headline"> Lacrymira </div>
+                                    <div slot="text"  class="charCard">
+                                        <div class="charStand">
+                                            <img src="../../images/charStand/insightStand.png">
+                                        </div>
+                                        <div class="charIntroduce">
+                                            <h3>~Ascendant - 8th Seeker~</h3>
+                                            <h1>拉可弥拉</h1>
+                                            <p>[SEEKER]</p>
+                                            <p>
+                                                HARD - <br>
+                                                Irruption Gauge - <br>
+                                                Chance to usurp Partners' World plays with 2x progress
+                                            </p>
+                                        </div>
+                                    </div>
+                                </s-dialog>
+                            </div>
+                            <div class="item">
+                                <s-card clickable="true">
+                                    <img slot="image" src="../../images/charCards/mayaCard.jpg">
+                                    <div slot="headline">摩耶 Maya</div>
+                                    <div slot="text">
+                                        Main Story Act 2 : <br>
+                                        Catastrophe
+                                    </div>
+                                </s-card>
+                            </div>
+                            <div class="item">
+                                <s-card clickable="true">
+                                    <img slot="image" src="../../images/charCards/tairitsuCard.jpg">
+                                    <div slot="headline">对立 Tairitsu</div>
+                                    <div slot="text">
+                                        Main Story Act 1 : <br>
+                                        Creation
+                                    </div>
+                                </s-card>
+                            </div>
+                            <div class="item">
+                                <s-card clickable="true">
+                                    <img slot="image" src="../../images/charCards/sayaCard.jpg">
+                                    <div slot="headline">咲弥 Saya</div>
+                                    <div slot="text">
+                                        Side Story & <br>
+                                        Main Story Act 2 : <br>
+                                        Catastrophe
+                                    </div>
+                                </s-card>
+                            </div>
+                            <div class="item">
+                                <s-card clickable="true">
+                                    <img slot="image" src="../../images/charCards/lagrangeCard.jpg">
+                                    <div slot="headline">拉格兰 Lagrange</div>
+                                    <div slot="text">
+                                        Side Story
+                                    </div>
+                                </s-card>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </s-scroll-view>
+
+            <!--应用栏-->
+            <s-appbar class="appbar">
+                <!--左侧导航按钮-->
+                <s-icon-button slot="navigation" onclick="document.querySelector('s-drawer').toggle()">
+                    <s-icon name="menu"></s-icon>
+                </s-icon-button>
+                <!--标题-->
+                <div slot="headline" class="headline"> Characters </div>
+                <!--搜索框-->
+                <s-search slot="search" placeholder="搜索关键字"
+                    oninput="this.children[1].style.display=this.value===''?'none':'flex'">
+                    <s-icon name="search" slot="start"></s-icon>
+                    <s-icon-button slot="end" style="display: none"
+                        onclick="this.parentElement.value='';this.style.display='none'">
+                        <s-icon name="close"></s-icon>
+                    </s-icon-button>
+                </s-search>
+                <!--亮/暗色切换-->
+                <s-tooltip slot="action">
+                    <s-icon-button slot="trigger" id="toggleTheme">
+                        <s-icon name="light_mode" id="toggleThemeIcon"></s-icon>
+                    </s-icon-button>
+                    切换主题
+                </s-tooltip>
+            </s-appbar>
+        </s-drawer>
+    </s-page>
+
+    <script src="./script.js"></script>
+
+</html>

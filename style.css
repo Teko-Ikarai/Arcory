@@ -1,0 +1,240 @@
+@import url(./fonts/font.css);
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    /**禁用字体缩放**/
+      -webkit-text-size-adjust: none;
+}
+
+/**隐藏未加载的组件**/
+:not(:defined) {
+    display: none;
+}
+
+.main {
+    container-name: main;
+    container-type: inline-size;
+    overscroll-behavior: none;
+}
+
+.appbar {
+    opacity: 0.7;
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.header {
+    container-name: header;
+    container-type: inline-size;
+    position: sticky;
+    top: calc(64px - 49%);
+    height: 49%;
+    background: var(--s-color-primary);
+    z-index: 1;
+    opacity: .95;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./images/bgHome.jpg');
+    background-size: cover;
+    background-position: center;
+    pointer-events: none;
+    opacity: .9;
+}
+
+.list {
+    max-width: 1280px;
+    margin: auto;
+    column-count: 3;
+    column-gap: 0;
+    column-fill: balance;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.list>.item {
+    padding: 8px;
+    break-inside: avoid;
+    -webkit-break-inside: avoid;
+}
+
+.list s-card {
+    max-width: none;
+    display: block;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.content {
+    font-family: 'Geosans', 'NotoSans';
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.headline {
+    font-family: 'GeoSansLight';
+}
+
+.startupScene {
+    container-name: startupScene;
+    position: relative;
+    width: 100%;
+    height: 420px;
+    top: -24px;
+    background-image: url('./images/startup/glass.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.startupSentences {
+    margin: auto;
+    width: 85%;
+    padding-top: 10%;
+    height: 60%;
+}
+
+.startupSentences img {
+    height: 32%;
+    display: block;
+}
+
+.characterContainer {
+    width: 100%;
+}
+
+.characters {
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    max-width: 90%;
+    background-image: url('./images/bgCharInfo.jpg');
+    background-size: cover;
+}
+
+.characters s-carousel-item {
+    background: none;
+}
+
+.characters img {
+    z-index: -1;
+    position: absolute;
+    left: -5%;
+}
+
+.characters .charInfo {
+    z-index: 1;
+    margin-left: 45%;
+    padding: 5%;
+    position: absolute;
+}
+
+.characters .charInfo h1 {
+    font-family: 'GeoSansLight', 'NotoSans';
+    font-size: 3rem;
+}
+
+@container main (max-width: 1024px) {
+    .header {
+        top: calc(56px - 49%);
+    }
+    .startupScene {
+        height: 240px;
+        .startupSentences {
+            height: 70%;
+            padding-top: 7%;
+        }
+    }
+    .characters .charInfo h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@container main (max-width: 768px) {
+    .list {
+        column-count: 2;
+    }
+    .startupScene {
+        height: 210px;
+        .startupSentences {
+            height: 70%;
+            width: 87%;
+            padding-top: 5%;
+        }
+    }
+    .characters {
+        margin-top: 3%;
+        margin-bottom: 3%;
+        .charInfo {
+            padding-top: 3%;
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@container main (max-width: 630px) {
+    .list {
+        column-count: 2;
+    }
+    .startupScene {
+        height: 150px;
+        top: -9px;
+        .startupSentences {
+            height: 70%;
+            width: 85%;
+            padding-top: 4%;
+        }
+    }
+    .characters .charInfo {
+        padding-top: 3%;
+        h1 {
+            font-size: 1.7rem;
+        }
+        p {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+@container main (max-width: 376px) {
+    .list {
+        column-count: 1;
+    }
+    .startupScene {
+        height: 90px;
+        top: 0px;
+    }
+    .characters {
+        margin-top: 1%;
+        margin-bottom: 2%;
+        .charInfo {
+            padding-top: 0%;
+            h1 {
+                font-size: 1.5rem;
+            }
+            p {
+                font-size: 0.6rem;
+            }
+        }
+    }
+}
